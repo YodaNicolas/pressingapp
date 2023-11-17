@@ -139,6 +139,11 @@
     align-items: center;
 }
 
+.lienFooter {
+    color: white;
+    text-decoration: none;
+}
+
 .Icon {
     width: 40px;
     height: 35px;
