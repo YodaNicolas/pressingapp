@@ -195,7 +195,7 @@
 }
 
 .CorpsContent {
-    margin-top: 4px !important;
+    margin-top: 2px !important;
     /* background-color: rgba(0, 0, 255, 0.356); */
     width: 100%;
     display: flex;
@@ -252,8 +252,6 @@
 /* RESPONSIVE ZONE */
 @media screen and (max-width:700px) {
     .CorpsContent {
-
-        height: 50vh;
-
+        height: 40vh;
     }
 }
