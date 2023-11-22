@@ -249,17 +249,21 @@
     gap: 15px;
 }
 
+.itemTeinte {
+    width: 8rem;
+    max-height: 12rem;
+    min-height: 11rem !important;
+    height: fit-content !important;
+    text-decoration: none;
+}
+
 /* RESPONSIVE ZONE */
 @media screen and (max-width:700px) {
     .CorpsContent {
-        height: 52vh;
+        height: 46vh;
     }
 
     .cardPrincTeinte {
-        padding-top: 8px;
-        background-color: rgb(90, 85, 85);
         height: 58vh;
-        flex-wrap: wrap;
-        gap: 15px;
     }
 }
