@@ -25,7 +25,7 @@
             </div>
             <div class="TotalDiv Prcp">
                 <div class="TotalDiv">
-                    Total: 200.0000000 Frc CFA
+                    Total: <span id="output" style="margin: 5px;"> 0 </span> Frc CFA
                 </div>
             </div>
             <div class="CentrContent">
@@ -51,47 +51,53 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td style="width: 50%;">Chemise/Polo/T-shirt</td>
-                                        <td>10000</td>
-                                        <td style="width: 4.1rem;"><input class="form-control form-control-sm"
-                                                type="number" placeholder="0" aria-label=".form-control-sm example">
+                                        <th scope="row">
+                                            <div class="DivAction">
+                                                1
+                                            </div>
+                                        </th>
+                                        <td style="width: 50%;">
+                                            <div class="DivAction">
+                                                Chemise/Polo/T-shirt
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="number" id="prix1" value="4" hidden>
+                                            <div class="DivAction">
+                                                4
+                                            </div>
+                                        </td>
+                                        <td style="width: 4.1rem;">
+                                            <div class="DivAction">
+                                                <input class="form-control form-control-sm" type="number"
+                                                    placeholder="0" id="qte1">
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td style="width: 50%;">Chemise/Polo/T-shirt</td>
-                                        <td>10000</td>
-                                        <td style="width: 4.1rem;"><input class="form-control form-control-sm"
-                                                type="number" placeholder="0" aria-label=".form-control-sm example">
+                                        <th scope="row">
+                                            <div class="DivAction">
+                                                1
+                                            </div>
+                                        </th>
+                                        <td style="width: 50%;">
+                                            <div class="DivAction">
+                                                Chemise/Polo/T-shirt
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="number" id="prix2" value="5" hidden>
+                                            <div class="DivAction">
+                                                5
+                                            </div>
+                                        </td>
+                                        <td style="width: 4.1rem;">
+                                            <div class="DivAction">
+                                                <input class="form-control form-control-sm" type="number"
+                                                    placeholder="0" id="qte2">
+                                            </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td style="width: 50%;">Chemise/Polo/T-shirt</td>
-                                        <td>10000</td>
-                                        <td style="width: 4.1rem;"><input class="form-control form-control-sm"
-                                                type="number" placeholder="0" aria-label=".form-control-sm example">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td style="width: 50%;">Chemise/Polo/T-shirt</td>
-                                        <td>10000</td>
-                                        <td style="width: 4.1rem;"><input class="form-control form-control-sm"
-                                                type="number" placeholder="0" aria-label=".form-control-sm example">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td style="width: 50%;">Chemise/Polo/T-shirt</td>
-                                        <td>10000</td>
-                                        <td style="width: 4.1rem;"><input class="form-control form-control-sm"
-                                                type="number" placeholder="0" aria-label=".form-control-sm example">
-                                        </td>
-                                    </tr>
-
-
 
                                 </tbody>
                             </table>
@@ -104,7 +110,8 @@
 
             </div>
             <div class="DivRetour">
-                <a class="btn btn-primary" style=" width:95%" href="index.html">Retour</a>
+                <a class="btn btn-dark" style=" width:44%" href="index.html">Retour</a>
+                <a class="btn btn-primary" style=" width:44%" href="index.html">Envoyer</a>
             </div>
         </div>
 
@@ -131,6 +138,38 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Fonction de calcul de la somme
+        function calculateSum() {
+            // Récupérer les valeurs saisies
+            var q1 = 0;
+            var q2 = 0;
+
+
+            p1 = parseInt(document.getElementById("prix1").value);
+            var q1 = parseFloat(document.getElementById("qte1").value) || 0;
+            p2 = parseInt(document.getElementById("prix2").value);
+            var q2 = parseFloat(document.getElementById("qte2").value) || 0;
+
+            // Calculer la somme
+            var total = p1 * q1 + p2 * q2;
+
+            // Afficher le résultat
+            var outputElement = document.getElementById("output");
+            outputElement.textContent = total;
+
+        }
+
+        // Ajouter un gestionnaire d'événement à chaque input
+        var input1Element = document.getElementById("qte1");
+        var input2Element = document.getElementById("qte2");
+
+        input1Element.addEventListener("input", calculateSum);
+        input2Element.addEventListener("input", calculateSum);
+    </script>
+
+
     <script>
         $(document).ready(function () {
             $("#barreRechercheArticle").on("input", function () {

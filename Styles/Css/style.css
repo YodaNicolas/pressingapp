@@ -13,6 +13,7 @@
     background-color: rgb(184, 184, 212);
 }
 
+
 .GeneralContent {
     height: 86%;
 }
@@ -99,6 +100,16 @@
 
 .ListeDesir {
     margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.ListeOption {
+
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -238,7 +249,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .cardPrincTeinte {
@@ -260,10 +271,74 @@
 /* RESPONSIVE ZONE */
 @media screen and (max-width:700px) {
     .CorpsContent {
-        height: 46vh;
+        height: 48vh;
     }
 
     .cardPrincTeinte {
         height: 58vh;
     }
+}
+
+/* ADMINHOME  */
+.TitreAdmin {
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.3rem;
+}
+
+.HomAdm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center !important;
+
+}
+
+.CorpConect {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formConect {
+    box-shadow: 5px 5px 10px #111111;
+    padding: 8px;
+    width: 80%;
+    background-color: rgb(224, 224, 231);
+    border-radius: 8px;
+}
+
+.labelCon {
+    position: relative;
+    top: 10px;
+    color: black;
+    font-weight: 400;
+}
+
+.divBtnCon {
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ZONE LISTE ADMIN */
+.DivAction {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
 }
