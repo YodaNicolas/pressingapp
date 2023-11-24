@@ -25,7 +25,7 @@
             </div>
             <div class="TotalDiv Prcp">
                 <div class="TotalDiv">
-                    Total: <span id="output" style="margin: 5px;"> 0 </span> Frc CFA
+                    Total: <span id="output" style="margin: 5px;color:black;font-weight:500"> 0 </span> Frc CFA
                 </div>
             </div>
             <div class="CentrContent">
@@ -62,15 +62,15 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <input type="number" id="prix1" value="4" hidden>
+                                            <input type="number" id="1" value="150" hidden>
                                             <div class="DivAction">
-                                                4
+                                                150
                                             </div>
                                         </td>
                                         <td style="width: 4.1rem;">
                                             <div class="DivAction">
                                                 <input class="form-control form-control-sm" type="number"
-                                                    placeholder="0" id="qte1">
+                                                    placeholder="0" id="-1" step="1" min="0" value=" ">
                                             </div>
                                         </td>
                                     </tr>
@@ -86,19 +86,18 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <input type="number" id="prix2" value="5" hidden>
+                                            <input type="number" id="2" value="200" hidden>
                                             <div class="DivAction">
-                                                5
+                                                200
                                             </div>
                                         </td>
                                         <td style="width: 4.1rem;">
                                             <div class="DivAction">
                                                 <input class="form-control form-control-sm" type="number"
-                                                    placeholder="0" id="qte2">
+                                                    placeholder="0" id="-2" step="1" min="0" value=" ">
                                             </div>
                                         </td>
                                     </tr>
-
                                 </tbody>
                             </table>
                         </div>
@@ -137,54 +136,11 @@
             </div>
         </div>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        // Fonction de calcul de la somme
-        function calculateSum() {
-            // Récupérer les valeurs saisies
-            var q1 = 0;
-            var q2 = 0;
-
-
-            p1 = parseInt(document.getElementById("prix1").value);
-            var q1 = parseFloat(document.getElementById("qte1").value) || 0;
-            p2 = parseInt(document.getElementById("prix2").value);
-            var q2 = parseFloat(document.getElementById("qte2").value) || 0;
-
-            // Calculer la somme
-            var total = p1 * q1 + p2 * q2;
-
-            // Afficher le résultat
-            var outputElement = document.getElementById("output");
-            outputElement.textContent = total;
-
-        }
-
-        // Ajouter un gestionnaire d'événement à chaque input
-        var input1Element = document.getElementById("qte1");
-        var input2Element = document.getElementById("qte2");
-
-        input1Element.addEventListener("input", calculateSum);
-        input2Element.addEventListener("input", calculateSum);
-    </script>
-
-
-    <script>
-        $(document).ready(function () {
-            $("#barreRechercheArticle").on("input", function () {
-                var valeurRecherche = $(this).val().toLowerCase();
-                $("table tbody tr").each(function () {
-                    var texteLigne = $(this).text().toLowerCase();
-                    if (texteLigne.indexOf(valeurRecherche) === -1) {
-                        $(this).hide();
-                    } else {
-                        $(this).show();
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="Styles/Js/recherche.js"></script>
+    <script src="Styles/Js/calculeTempReel.js"></script>
     <script src="Styles/Js/all.js"></script>
     <script src="Styles/Js/bootstrap.min.js"></script>
     <script src="Styles/Js/bootstrap.bundle.min.js"></script>
