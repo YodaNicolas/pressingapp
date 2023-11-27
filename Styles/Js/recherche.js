@@ -13,6 +13,7 @@ $(document).ready(function () {
 });
 
 
+
 // RECHERCHE CARD
 $(document).ready(function () {
     $("#barreRechercheTeinte").on("input", function () {
