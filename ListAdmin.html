@@ -38,8 +38,8 @@
                     </div>
                     <div class="card-body largeur">
                         <div class="CorpsContent">
-                            <table class="table table-bordered border-primary table-striped table-hover"
-                                style="width: 90% !important; height:38vh">
+                            <table class="table AdminTab table-bordered border-primary table-striped table-hover"
+                                style="width: 85%!important; height:38vh">
                                 <thead>
                                     <tr style="position:sticky; top:-5px; background-color:rgb(8, 131, 238)">
                                         <th scope="col">N°</th>
@@ -50,15 +50,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                     <tr>
                                         <th scope="row">
                                             <div class="DivAction">
                                                 1
                                             </div>
                                         </th>
-                                        <td style="width: 50%;">
+                                        <td style="width: 47%;" class="tdad">
                                             <div class="DivAction">
-                                                rouge
+                                                <div class="NomArticle">
+                                                    Chemise/polopolollhhokk
+                                                </div>
+
                                             </div>
                                         </td>
                                         <td>
@@ -69,103 +73,43 @@
                                         <td class="tdAct">
                                             <div class="DivAction">
                                                 <a class="btn btn-primary btn-sm btnAct" href="index.html">Modifier</a>
-                                                <a class="btn btn-danger btn-sm btnAct" href="index.html">Supprimer</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="DivAction">
-                                                1
-                                            </div>
-                                        </th>
-                                        <td style="width: 50%;">
-                                            <div class="DivAction">
-                                                rouge
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="DivAction">
-                                                10000
-                                            </div>
-                                        </td>
-                                        <td class="tdAct">
-                                            <div class="DivAction">
-                                                <a class="btn btn-primary btn-sm btnAct" href="index.html">Modifier</a>
-                                                <a class="btn btn-danger btn-sm btnAct" href="index.html">Supprimer</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="DivAction">
-                                                1
-                                            </div>
-                                        </th>
-                                        <td style="width: 50%;">
-                                            <div class="DivAction">
-                                                marron
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="DivAction">
-                                                10000
-                                            </div>
-                                        </td>
-                                        <td class="tdAct">
-                                            <div class="DivAction">
-                                                <a class="btn btn-primary btn-sm btnAct" href="index.html">Modifier</a>
-                                                <a class="btn btn-danger btn-sm btnAct" href="index.html">Supprimer</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="DivAction">
-                                                1
-                                            </div>
-                                        </th>
-                                        <td style="width: 50%;">
-                                            <div class="DivAction">
-                                                noir
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="DivAction">
-                                                10000
-                                            </div>
-                                        </td>
-                                        <td class="tdAct">
-                                            <div class="DivAction">
-                                                <a class="btn btn-primary btn-sm btnAct" href="index.html">Modifier</a>
-                                                <a class="btn btn-danger btn-sm btnAct" href="index.html">Supprimer</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="DivAction">
-                                                1
-                                            </div>
-                                        </th>
-                                        <td style="width: 47%;">
-                                            <div class="DivAction">
-                                                Chemise/Polo/T-shirt
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="DivAction">
-                                                10000
-                                            </div>
-                                        </td>
-                                        <td class="tdAct">
-                                            <div class="DivAction">
-                                                <a class="btn btn-primary btn-sm btnAct" href="index.html">Modifier</a>
-                                                <a class="btn btn-danger btn-sm btnAct" href="index.html">Supprimer</a>
+                                                <form action="#" method="post" id="formSupprEventId">
+                                                    <!-- @csrf -->
+                                                    <!-- <input type="number" hidden name="id_manag" value="{{ $Manager->id }}"> -->
+                                                    <!-- <input type="number" hidden value="{{ $loop->iteration }}"> -->
+                                                    <button type="button" class="btn btn-danger btn-sm btnAct"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#supprModalId">Supprimer</button>
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>
 
+                                    <!-- MODAL -->
+                                    <div class="modal" id="supprModalId" tabindex="-1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Confirmation</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Voulez vous vraiment supprimer le manager Numéro
+                                                        1: <br> Kabre avec
+                                                        tous ses évenements ?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">NON</button>
+                                                    <button type="button"
+                                                        onclick="confirmerSuppresseion('{{ $Manager->id }}')"
+                                                        class="btn btn-primary">OUI
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </tbody>
                             </table>
                         </div>
