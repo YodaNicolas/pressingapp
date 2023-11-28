@@ -281,13 +281,8 @@
 
     /* STYLE TABLAUX */
     .tdad {
-        background-color: aqua !important;
         padding: 4px !important;
         max-width: 45% !important;
-    }
-
-    .AdminTab {
-        /* width: 75px !important; */
     }
 }
 
@@ -357,6 +352,6 @@
     gap: 4px;
 }
 
-.NomArticle {
+.NomArticleAdminTab {
     max-width: 4rem !important;
 }
