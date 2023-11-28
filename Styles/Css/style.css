@@ -51,15 +51,16 @@
 
 .marquee {
     white-space: nowrap;
-    overflow: hidden;
-    width: 80%;
-    animation: marquee 30s linear infinite;
+    /* overflow: hidden; */
+    width: fit-content !important;
+    /* background-color: aqua; */
+    animation: marquee 60s linear infinite;
     /* Réglez la durée et les autres propriétés d'animation selon vos besoins  */
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        transform: translateX(12.5%);
     }
 
     100% {
